@@ -124,7 +124,9 @@ export function initDefenseCarousel({ selectMode }) {
       dot.classList.toggle('active', selected)
       dot.setAttribute('aria-selected', String(selected))
       dot.setAttribute('aria-label', `Mostrar ${itemName}`)
+      dot.tabIndex = selected ? 0 : -1
     })
+    slide.setAttribute('aria-labelledby', dots[currentIndex].id)
 
     slide.style.animation = 'none'
     void slide.offsetWidth
@@ -146,6 +148,27 @@ export function initDefenseCarousel({ selectMode }) {
   dots.forEach((dot) => dot.addEventListener('click', () => {
     currentIndex = Number(dot.dataset.defenseIndex)
     render()
+  }))
+  dots.forEach((dot) => dot.addEventListener('keydown', (event) => {
+    const keyDirections = {
+      ArrowLeft: -1,
+      ArrowUp: -1,
+      ArrowRight: 1,
+      ArrowDown: 1,
+    }
+
+    if (event.key === 'Home' || event.key === 'End') {
+      event.preventDefault()
+      currentIndex = event.key === 'Home' ? 0 : dots.length - 1
+    } else if (event.key in keyDirections) {
+      event.preventDefault()
+      currentIndex = (currentIndex + keyDirections[event.key] + dots.length) % dots.length
+    } else {
+      return
+    }
+
+    render()
+    dots[currentIndex].focus()
   }))
 
   document.addEventListener('tower:defender:modechange', (event) => {

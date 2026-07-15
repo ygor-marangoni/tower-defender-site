@@ -1,5 +1,3 @@
-@import url("./motion.css");
-
 /* Grid compartilhado por todo o conteudo abaixo da primeira dobra. */
 :root {
   --content-grid-max: 1648px;

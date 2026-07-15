@@ -20,6 +20,7 @@ footer {
 
 footer img {
   width: 174px;
+  height: auto;
   filter: brightness(1.22) saturate(0.82);
 }
 
@@ -121,6 +122,14 @@ footer img {
   background: transparent;
   color: #edf0ee;
   font: 500 16px/1 Figtree, Manrope, sans-serif;
+}
+
+.footer-contact-form:focus-within {
+  border-color: var(--cyan);
+}
+
+.footer-contact-form input:focus-visible {
+  outline: 0;
 }
 
 .footer-contact-form input::placeholder {

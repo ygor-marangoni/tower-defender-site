@@ -15,7 +15,7 @@ Este documento é a referência para qualquer novo chat ou pessoa que continue o
 
 ## 2. Referências do produto
 
-- Jogo publicado: <https://tower-defensor.netlify.app/>
+- Jogo publicado: <https://tower-defender.pages.dev/>
 - Repositório local usado como referência do jogo: `C:\Users\drz\Desktop\Pessoal\tower-defender`
 - Caso o repositório do jogo esteja fora da área permitida pelo ambiente, solicitar autorização antes de acessá-lo ou modificá-lo.
 - A landing page representa esse jogo; nomes, torres, modos, estatísticas e ícones devem permanecer coerentes com ele.
@@ -66,8 +66,8 @@ Este documento é a referência para qualquer novo chat ou pessoa que continue o
 - Título: “ESCOLHA COMO VOCÊ / VAI SOBREVIVER”.
 - O título deve permanecer em no máximo duas linhas e não pode sofrer corte horizontal.
 - Ícones reais:
-  - Futurista: `space-ship.png`;
-  - Medieval: `castle.png`.
+  - Futurista: `space-ship.webp`;
+  - Medieval: `castle.webp`.
 - Imagens reais dos cards:
   - modo futurista: asset `futurista-modo`;
   - modo medieval: asset `medieval`.
@@ -118,7 +118,7 @@ Regras atuais para telas pequenas, concentradas principalmente em `responsive.cs
 ## 11. Conteúdo e interações
 
 - Preservar textos, estados, links e assets já presentes.
-- O CTA do jogo aponta para `https://tower-defensor.netlify.app/`.
+- O CTA do jogo aponta para `https://tower-defender.pages.dev/`.
 - O slider deve continuar funcionando por:
   - setas desktop;
   - setas mobile;

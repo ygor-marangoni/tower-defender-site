@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tower-defender.pages.dev/sitemap.xml

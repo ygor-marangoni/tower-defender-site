@@ -9,20 +9,32 @@ export function initNavigation() {
   let lastScrollY = window.scrollY
   let scrollTicking = false
 
+  const syncNavigationAccessibility = () => {
+    const hidden = compactViewport.matches && toggle.getAttribute('aria-expanded') !== 'true'
+    navigation.inert = hidden
+    if (hidden) navigation.setAttribute('aria-hidden', 'true')
+    else navigation.removeAttribute('aria-hidden')
+  }
+
   const setOpen = (open) => {
     navigation.classList.toggle('open', open)
     toggle.setAttribute('aria-expanded', String(open))
     toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu')
     toggle.querySelector('.menu-icon')?.classList.toggle('is-open', open)
     if (open) topbar.classList.remove('is-hidden')
+    syncNavigationAccessibility()
   }
 
   const updateTopbar = () => {
     if (!compactViewport.matches) {
+      if (toggle.getAttribute('aria-expanded') === 'true') setOpen(false)
+      syncNavigationAccessibility()
       topbar.classList.remove('is-scrolled', 'is-hidden')
       lastScrollY = window.scrollY
       return
     }
+
+    syncNavigationAccessibility()
 
     const currentScrollY = window.scrollY
     const pastHeroStart = currentScrollY > 28

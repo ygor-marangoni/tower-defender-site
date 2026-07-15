@@ -1,7 +1,9 @@
+import { readStorage } from '../storage.js'
+
 const modes = ['futuristic', 'medieval']
 
 function readNumber(key) {
-  const value = Number(localStorage.getItem(key) || 0)
+  const value = Number(readStorage(key, 0))
   return Number.isFinite(value) ? value : 0
 }
 

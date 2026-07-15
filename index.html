@@ -3,9 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Escolha entre os modos Futurista e Medieval e defenda sua base." />
-    <title>Tower Defensor · Escolha seu lado</title>
+    <meta name="description" content="Jogue Tower Defensor, escolha entre os universos Futurista e Medieval, posicione suas defesas e sobreviva a ondas cada vez mais desafiadoras." />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="theme-color" content="#070a0f" />
+    <meta name="application-name" content="Tower Defensor" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>Tower Defensor | Tower defense futurista e medieval</title>
+    <link rel="canonical" href="https://tower-defender.pages.dev/" />
+    <link rel="manifest" href="./site.webmanifest" />
     <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Tower Defensor" />
+    <meta property="og:title" content="Tower Defensor | Tower defense futurista e medieval" />
+    <meta property="og:description" content="Escolha seu universo, monte sua estratégia e sobreviva a cada onda em Tower Defensor." />
+    <meta property="og:url" content="https://tower-defender.pages.dev/" />
+    <meta property="og:image" content="https://tower-defender.pages.dev/assets/images/hero-img-medieval.webp" />
+    <meta property="og:image:width" content="1882" />
+    <meta property="og:image:height" content="875" />
+    <meta property="og:image:alt" content="Arena medieval do Tower Defensor com a estrada do cerco e as defesas do castelo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tower Defensor | Tower defense futurista e medieval" />
+    <meta name="twitter:description" content="Escolha seu universo, monte sua estratégia e sobreviva a cada onda em Tower Defensor." />
+    <meta name="twitter:image" content="https://tower-defender.pages.dev/assets/images/hero-img-medieval.webp" />
+    <meta name="twitter:image:alt" content="Arena medieval do Tower Defensor com a estrada do cerco e as defesas do castelo" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Figtree:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" />
+    <link rel="preload" href="./assets/fonts/ProtestStrike-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./assets/fonts/Sohne.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./assets/images/hero-img-medieval.webp" as="image" type="image/webp" fetchpriority="high" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/variables.css" />
     <link rel="stylesheet" href="./css/global.css" />
@@ -17,9 +44,26 @@
     <link rel="stylesheet" href="./css/sections/tutorial.css" />
     <link rel="stylesheet" href="./css/sections/ranking.css" />
     <link rel="stylesheet" href="./css/sections/footer.css" />
+    <link rel="stylesheet" href="./css/motion.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Tower Defensor",
+        "url": "https://tower-defender.pages.dev/",
+        "description": "Jogo de tower defense com universos Futurista e Medieval, defesas estratégicas e ondas progressivas.",
+        "image": "https://tower-defender.pages.dev/assets/images/hero-img-medieval.webp",
+        "inLanguage": "pt-BR",
+        "genre": ["Tower defense", "Estratégia"],
+        "playMode": "SinglePlayer",
+        "gamePlatform": "Navegador web",
+        "applicationCategory": "Game"
+      }
+    </script>
   </head>
   <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
     <div class="site-shell is-futuristic">
       <div class="site-loader" data-site-loader role="status" aria-live="polite" aria-atomic="true" aria-label="Carregando Tower Defensor, 0 por cento">
         <div class="site-loader-panel">
@@ -58,15 +102,15 @@
         <a href="#defesas" data-floating-nav-link>Defesas</a>
         <a href="#tutorial" data-floating-nav-link>Como jogar</a>
         <a href="#ranking" data-floating-nav-link>Ranking</a>
-        <a class="floating-nav-cta" href="https://tower-defensor.netlify.app/">Jogar agora</a>
+        <a class="floating-nav-cta" href="https://tower-defender.pages.dev/">Jogar agora</a>
       </nav>
 
       <main id="conteudo">
-        <section id="inicio" class="hero hero-reference">
+        <section id="inicio" class="hero hero-reference" aria-labelledby="hero-title">
           <div class="hero-scanline" aria-hidden="true"></div>
           <div class="hero-center">
             <p class="hero-overline">TOWER DEFENSOR</p>
-            <h1>DEFENDA<br /><span>SEU LEGADO</span></h1>
+            <h1 id="hero-title">DEFENDA<br /><span>SEU LEGADO</span></h1>
             <p class="hero-lead">
               <span class="hero-copy-desktop">Posicione suas defesas, domine cada rota e sobreviva às ondas em dois universos. Escolha sua estratégia e supere seu recorde.</span>
               <span class="hero-copy-mobile">Defenda sua base e sobreviva às ondas em dois universos.</span>
@@ -80,7 +124,7 @@
               <span><b><i data-icon="trophy"></i></b> recordes por modo</span>
             </div>
             <figure class="hero-feature-image">
-              <img src="./assets/images/hero-img-medieval.png" alt="Arena medieval do Tower Defensor com a estrada do cerco e as defesas do castelo" />
+              <img src="./assets/images/hero-img-medieval.webp" width="1882" height="875" fetchpriority="high" decoding="async" alt="Arena medieval do Tower Defensor com a estrada do cerco e as defesas do castelo" />
             </figure>
             <div class="hero-ribbons">
               <div class="hero-ticker ribbon ribbon--back" aria-label="Recursos do jogo">
@@ -93,11 +137,11 @@
           </div>
         </section>
 
-        <section id="jogar" class="mode-section modes-section section-wrap">
+        <section id="jogar" class="mode-section modes-section section-wrap" aria-labelledby="modes-title">
           <div class="modes-heading">
             <div>
               <p class="kicker">Dois universos. Uma defesa.</p>
-              <h2>ESCOLHA COMO VOCÊ<br />VAI SOBREVIVER</h2>
+              <h2 id="modes-title">ESCOLHA COMO VOCÊ<br />VAI SOBREVIVER</h2>
             </div>
             <div class="modes-heading-action">
               <p class="modes-intro">Duas rotas, dois ritmos e uma arena feita para testar suas decisões</p>
@@ -106,37 +150,37 @@
             <span class="section-grid-marker section-grid-marker-top-left" aria-hidden="true"></span>
             <span class="section-grid-marker section-grid-marker-top-right" aria-hidden="true"></span>
           </div>
-          <div id="modos" class="mode-grid">
+          <div id="modos" class="mode-grid" role="radiogroup" aria-labelledby="modes-title">
             <span class="grid-junction grid-junction-left" aria-hidden="true"></span>
             <span class="grid-junction grid-junction-center" aria-hidden="true"></span>
             <span class="grid-junction grid-junction-right" aria-hidden="true"></span>
             <span class="grid-junction grid-junction-bottom-left" aria-hidden="true"></span>
             <span class="grid-junction grid-junction-bottom-center" aria-hidden="true"></span>
             <span class="grid-junction grid-junction-bottom-right" aria-hidden="true"></span>
-            <article class="mode-card futuristic-card selected" data-mode="futuristic" aria-current="true" tabindex="0" role="button">
-              <div class="card-top"><img class="mode-icon-image" src="./assets/images/space-ship.png" alt="" /></div>
+            <article class="mode-card futuristic-card selected" data-mode="futuristic" role="radio" aria-checked="true" tabindex="0">
+              <div class="card-top"><img class="mode-icon-image" src="./assets/images/space-ship.webp" width="142" height="140" loading="lazy" decoding="async" alt="" /></div>
               <h3>Modo Futurista</h3>
               <p>Domine rotas energizadas, use torres de pulso e segure ondas velozes antes que qualquer ameaça alcance o núcleo.</p>
               <div class="mode-card-divider"></div>
-              <div class="mode-placeholder"><img src="./assets/images/futurista-modo.png" alt="Arena futurista do Tower Defensor" /></div>
+              <div class="mode-placeholder"><img src="./assets/images/futurista-modo.webp" width="1362" height="692" loading="lazy" decoding="async" alt="Arena futurista do Tower Defensor" /></div>
             </article>
-            <article class="mode-card medieval-card" data-mode="medieval" tabindex="0" role="button">
-              <div class="card-top"><img class="mode-icon-image" src="./assets/images/castle.png" alt="" /></div>
+            <article class="mode-card medieval-card" data-mode="medieval" role="radio" aria-checked="false" tabindex="-1">
+              <div class="card-top"><img class="mode-icon-image" src="./assets/images/castle.webp" width="134" height="142" loading="lazy" decoding="async" alt="" /></div>
               <h3>Modo Medieval</h3>
               <p>Proteja o castelo com arqueiros, bestas e canhões enquanto hordas inimigas avançam pela estrada do cerco.</p>
               <div class="mode-card-divider"></div>
-              <div class="mode-placeholder"><img src="./assets/images/medieval-modo.png" alt="Arena medieval do Tower Defensor" /></div>
+              <div class="mode-placeholder"><img src="./assets/images/medieval-modo.webp" width="1362" height="692" loading="lazy" decoding="async" alt="Arena medieval do Tower Defensor" /></div>
             </article>
           </div>
         </section>
 
-        <section id="defesas" class="defense-section defenses-section section-wrap">
+        <section id="defesas" class="defense-section defenses-section section-wrap" aria-labelledby="defenses-title">
           <div class="defenses-intro">
             <span class="defenses-grid-junction defenses-grid-junction-top-left" aria-hidden="true"></span>
             <span class="defenses-grid-junction defenses-grid-junction-top-right" aria-hidden="true"></span>
             <span class="defenses-grid-junction defenses-grid-junction-bottom-left" aria-hidden="true"></span>
             <span class="defenses-grid-junction defenses-grid-junction-bottom-right" aria-hidden="true"></span>
-            <h2>CONHEÇA SUAS DEFESAS</h2>
+            <h2 id="defenses-title">CONHEÇA SUAS DEFESAS</h2>
           </div>
           <div class="defenses-content">
           <span class="section-grid-marker section-grid-marker-bottom-left" aria-hidden="true"></span>
@@ -170,7 +214,7 @@
               </div>
             </div>
             <span class="defense-mobile-counter" data-defense-counter aria-live="polite">01 / 03</span>
-            <article class="defense-slide" data-defense-slide>
+            <article id="defense-panel" class="defense-slide" data-defense-slide role="tabpanel" aria-live="polite" aria-labelledby="defense-tab-basic">
               <p class="defense-description" data-defense-description>Precisão confiável para controlar a rota.</p>
               <h3 data-defense-name>Canhão de Pulso</h3>
               <p class="defense-role-copy" data-defense-role-copy>Uma opção confiável para começar a partida, controlar a rota e evoluir sem comprometer todos os seus créditos.</p>
@@ -180,7 +224,7 @@
                 <span><i data-icon="zap"></i><b data-defense-cooldown>0,7s</b><small>Cadência</small></span>
                 <span><i data-icon="coins"></i><b data-defense-cost>50</b><small data-defense-cost-label>Créditos</small></span>
               </div>
-              <a class="defense-cta" href="https://tower-defensor.netlify.app/" data-play-defense>
+              <a class="defense-cta" href="https://tower-defender.pages.dev/" data-play-defense>
                 JOGAR NESTE MODO
                 <span aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none">
@@ -191,27 +235,27 @@
             </article>
           </div>
           <div class="defense-dots" role="tablist" aria-label="Selecionar defesa">
-            <button class="active" type="button" role="tab" aria-selected="true" aria-label="Mostrar defesa básica" data-defense-index="0"><span class="defense-card-number">01</span><strong>Básica</strong><small>Equilíbrio</small><span class="defense-card-icon" aria-hidden="true"><i data-icon="target"></i></span></button>
-            <button type="button" role="tab" aria-selected="false" aria-label="Mostrar defesa rápida" data-defense-index="1"><span class="defense-card-number">02</span><strong>Rápida</strong><small>Velocidade</small><span class="defense-card-icon" aria-hidden="true"><i data-icon="zap"></i></span></button>
-            <button type="button" role="tab" aria-selected="false" aria-label="Mostrar defesa pesada" data-defense-index="2"><span class="defense-card-number">03</span><strong>Pesada</strong><small>Impacto</small><span class="defense-card-icon" aria-hidden="true"><i data-icon="bomb"></i></span></button>
+            <button id="defense-tab-basic" class="active" type="button" role="tab" aria-selected="true" aria-controls="defense-panel" aria-label="Mostrar defesa básica" tabindex="0" data-defense-index="0"><span class="defense-card-number">01</span><strong>Básica</strong><small>Equilíbrio</small><span class="defense-card-icon" aria-hidden="true"><i data-icon="target"></i></span></button>
+            <button id="defense-tab-rapid" type="button" role="tab" aria-selected="false" aria-controls="defense-panel" aria-label="Mostrar defesa rápida" tabindex="-1" data-defense-index="1"><span class="defense-card-number">02</span><strong>Rápida</strong><small>Velocidade</small><span class="defense-card-icon" aria-hidden="true"><i data-icon="zap"></i></span></button>
+            <button id="defense-tab-heavy" type="button" role="tab" aria-selected="false" aria-controls="defense-panel" aria-label="Mostrar defesa pesada" tabindex="-1" data-defense-index="2"><span class="defense-card-number">03</span><strong>Pesada</strong><small>Impacto</small><span class="defense-card-icon" aria-hidden="true"><i data-icon="bomb"></i></span></button>
           </div>
           </div>
         </section>
 
-        <section id="ranking" class="ranking-section section-wrap">
+        <section id="ranking" class="ranking-section section-wrap" aria-labelledby="ranking-title">
           <div class="ranking-intro">
             <span class="section-grid-marker section-grid-marker-top-left" aria-hidden="true"></span>
             <span class="section-grid-marker section-grid-marker-top-right" aria-hidden="true"></span>
             <span class="section-grid-marker section-grid-marker-bottom-left" aria-hidden="true"></span>
             <span class="section-grid-marker section-grid-marker-bottom-right" aria-hidden="true"></span>
-            <h2>DOIS MODOS, DOIS RECORDES PARA SUPERAR!</h2>
+            <h2 id="ranking-title">DOIS MODOS, DOIS RECORDES PARA SUPERAR!</h2>
           </div>
           <div class="ranking-inner">
             <div class="ranking-copy">
               <p class="kicker"><i data-icon="trophy"></i>Hall da fama</p>
               <h3>Seu lugar é no topo.</h3>
               <p>Os cinco maiores resultados da arena, classificados por pontuação e pela maior onda superada.</p>
-              <a class="defense-cta ranking-cta" href="https://tower-defensor.netlify.app/">
+              <a class="defense-cta ranking-cta" href="https://tower-defender.pages.dev/">
                 CONQUISTAR MEU LUGAR
                 <span aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none">
@@ -265,12 +309,12 @@
           </div>
         </section>
 
-        <section id="tutorial" class="tutorial-section section-wrap">
+        <section id="tutorial" class="tutorial-section section-wrap" aria-labelledby="tutorial-title">
           <div class="tutorial-content">
           <span class="section-grid-marker section-grid-marker-top-left" aria-hidden="true"></span>
           <span class="section-grid-marker section-grid-marker-top-right" aria-hidden="true"></span>
           <div class="tutorial-heading">
-            <div class="section-heading"><h2>DA PRIMEIRA DEFESA AO PRÓXIMO RECORDE</h2></div>
+            <div class="section-heading"><h2 id="tutorial-title">DA PRIMEIRA DEFESA AO PRÓXIMO RECORDE</h2></div>
             <div class="tutorial-heading-action">
               <p class="tutorial-intro">A lógica é simples de aprender e difícil de dominar: construa fora da rota, administre recursos e adapte sua estratégia a cada onda.</p>
               <a class="tutorial-records-cta" href="#ranking">VER RECORDES <span><i data-icon="trophy"></i></span></a>
@@ -284,7 +328,7 @@
             <article><span>05</span><div><small><i data-icon="zap"></i>EVOLUA</small><h3>Melhore ou venda</h3><p>Selecione unidades posicionadas para ganhar níveis ou vender e recuperar 70% do valor investido.</p></div></article>
             <article><span>06</span><div><small><i data-icon="infinity"></i>ADAPTE</small><h3>Escolha uma carta</h3><p>A cada três ondas concluídas, escolha uma melhoria roguelite e transforme sua estratégia.</p></div></article>
           </div>
-          <button class="tutorial-callout" type="button" data-shortcuts-open aria-haspopup="dialog" aria-controls="shortcuts-dialog" aria-label="Conhecer os atalhos do jogo">
+          <button class="tutorial-callout" type="button" data-shortcuts-open aria-haspopup="dialog" aria-controls="shortcuts-dialog" aria-expanded="false" aria-label="Conhecer os atalhos do jogo">
             <div class="tutorial-shortcuts-copy"><small>CONHEÇA OS ATALHOS DO JOGO</small><strong>Domine os comandos e reaja mais rápido.</strong></div>
             <span class="tutorial-shortcuts-trigger">CONHECER ATALHOS <span class="tutorial-shortcuts-arrow" aria-hidden="true"><i data-icon="arrow-right"></i></span></span>
           </button>
@@ -293,7 +337,7 @@
       </main>
 
       <div class="shortcuts-modal" data-shortcuts-modal hidden>
-        <div class="shortcuts-modal-backdrop" data-shortcuts-close></div>
+        <div class="shortcuts-modal-backdrop" data-shortcuts-close aria-hidden="true"></div>
         <section id="shortcuts-dialog" class="shortcuts-dialog" role="dialog" aria-modal="true" aria-labelledby="shortcuts-title" tabindex="-1">
           <div class="shortcuts-dialog-header">
             <div><p>COMANDOS RÁPIDOS</p><h2 id="shortcuts-title">ATALHOS DO JOGO</h2></div>
@@ -317,7 +361,7 @@
           <span class="section-grid-marker section-grid-marker-bottom-left" aria-hidden="true"></span>
           <span class="section-grid-marker section-grid-marker-bottom-right" aria-hidden="true"></span>
           <div class="footer-brand">
-            <img src="./assets/images/logo-horizontal.svg" alt="Tower Defensor" />
+            <img src="./assets/images/logo-horizontal.svg" loading="lazy" decoding="async" alt="Tower Defensor" />
             <p class="footer-brand-title">Defenda sua base. Construa seu recorde.</p>
             <p class="footer-brand-copy">Escolha seu universo, monte sua estratégia e sobreviva a cada onda.</p>
           </div>

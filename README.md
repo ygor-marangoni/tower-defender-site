@@ -20,6 +20,12 @@ Principais recursos:
 ```text
 .
 ├── index.html
+├── 404.html
+├── llms.txt
+├── _headers
+├── robots.txt
+├── sitemap.xml
+├── site.webmanifest
 ├── assets/
 │   ├── fonts/
 │   ├── icons/
@@ -36,6 +42,7 @@ Principais recursos:
     ├── main.js
     ├── animations.js
     ├── navigation.js
+    ├── storage.js
     └── components/
 ```
 
@@ -48,6 +55,9 @@ Arquivos importantes:
 - `js/components/carousel.js`: troca de defesas e modos.
 - `js/components/tower-preview.js`: renderizacao das torres no canvas.
 - `js/components/records.js`: leitura dos recordes do jogo no `localStorage`.
+- `robots.txt` e `sitemap.xml`: descoberta e indexacao por buscadores.
+- `llms.txt`: mapa textual das principais secoes para agentes.
+- `_headers`: cabecalhos de seguranca para o Cloudflare Pages.
 
 ## Como executar
 
@@ -100,8 +110,8 @@ Tambem existe compatibilidade com chaves antigas do modo Futurista:
 
 ## Referencia
 
-Jogo publicado: <https://tower-defensor.netlify.app/>
+Jogo publicado: <https://tower-defender.pages.dev/>
 
 ## Status
 
-Projeto estatico pronto para hospedagem em plataformas como Netlify, Vercel, GitHub Pages ou qualquer servidor de arquivos estaticos.
+Projeto estatico configurado para hospedagem no Cloudflare Pages.

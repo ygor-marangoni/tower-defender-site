@@ -1,0 +1,20 @@
+# Tower Defensor
+
+> Tower Defensor é um jogo de estratégia no estilo tower defense, em português do Brasil, com universos Futurista e Medieval.
+
+## Página principal
+
+- [Tower Defensor](https://tower-defender.pages.dev/): apresentação do jogo, modos, defesas, ranking e tutorial.
+
+## Navegação
+
+- [Início](https://tower-defender.pages.dev/#inicio): proposta principal do jogo.
+- [Modos](https://tower-defender.pages.dev/#jogar): seleção entre os universos Futurista e Medieval.
+- [Defesas](https://tower-defender.pages.dev/#defesas): tipos de torres, atributos e custos.
+- [Como jogar](https://tower-defender.pages.dev/#tutorial): fluxo da partida e atalhos.
+- [Ranking](https://tower-defender.pages.dev/#ranking): maiores resultados por universo.
+
+## Recursos para indexação
+
+- [Sitemap](https://tower-defender.pages.dev/sitemap.xml)
+- [Robots](https://tower-defender.pages.dev/robots.txt)
