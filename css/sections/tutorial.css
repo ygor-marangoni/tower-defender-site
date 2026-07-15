@@ -1,0 +1,435 @@
+.tutorial-section {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+  overflow: hidden;
+  background: #0e0e11;
+  border-top: 0;
+  border-bottom: 1.5px solid rgba(218, 228, 221, 0.14);
+}
+
+.tutorial-content {
+  position: relative;
+  padding: 64px 0 0;
+  border-right: 1.5px solid rgba(218, 228, 221, 0.14);
+  border-left: 1.5px solid rgba(218, 228, 221, 0.14);
+}
+
+.tutorial-heading,
+.gameplay-loop,
+.tutorial-callout {
+  width: 100%;
+  margin-inline: auto;
+}
+
+.tutorial-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+  align-items: end;
+  gap: 72px;
+  margin-bottom: 54px;
+  padding-inline: 44px;
+}
+
+.tutorial-heading .section-heading {
+  max-width: 760px;
+  margin-bottom: 0;
+}
+
+.tutorial-heading-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 22px;
+}
+
+.tutorial-heading h2 {
+  margin: 0;
+  color: #edf0ee;
+  background: linear-gradient(100deg, #e2dede 0%, #dce4e6 45%, #c8edf6 100%);
+  background-clip: text;
+  font: 400 clamp(48px, 4.4vw, 68px)/0.98 ProtestStrike, Impact, sans-serif;
+  letter-spacing: 0.01em;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tutorial-intro {
+  margin: 0;
+  color: #a9b3aa;
+  font: 15px/1.75 Figtree, Manrope, sans-serif;
+  text-align: right;
+}
+
+.tutorial-records-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 260px;
+  min-height: 61px;
+  padding: 10px 11px 10px 30px;
+  border-radius: 999px;
+  background: #39b9ec;
+  color: #071620;
+  font: 700 15px/1 Figtree, Manrope, sans-serif;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.tutorial-records-cta:hover {
+  background: #52c7f4;
+  transform: translateY(-2px);
+}
+
+.tutorial-records-cta span {
+  display: grid;
+  flex: 0 0 39px;
+  width: 39px;
+  height: 39px;
+  margin-left: 18px;
+  place-items: center;
+  border-radius: 50%;
+  background: #e5f3f8;
+}
+
+.tutorial-records-cta svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.8;
+}
+
+.gameplay-loop {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  border-top: 1px solid rgba(218, 228, 221, 0.11);
+  background: rgba(218, 228, 221, 0.14);
+}
+
+.gameplay-loop article {
+  position: relative;
+  display: grid;
+  grid-template-columns: 68px minmax(0, 1fr);
+  gap: 24px;
+  min-height: 0;
+  padding: 30px 30px 40px;
+  overflow: hidden;
+  background: #0e0e11;
+  transition: background-color 220ms ease;
+}
+
+.gameplay-loop article:hover {
+  background: #0e0e11;
+}
+
+
+.gameplay-loop article > span {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border: 1px solid rgba(141, 158, 174, 0.42);
+  border-radius: 50%;
+  color: #39b9ec;
+  background: rgba(57, 185, 236, 0.06);
+  font: 400 16px/1 ProtestStrike, Impact, sans-serif;
+}
+
+.gameplay-loop small {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #39b9ec;
+  font: 600 9px Figtree, Manrope, sans-serif;
+  letter-spacing: 0.12em;
+  font-size: 11px;
+}
+
+.gameplay-loop small svg {
+  flex: 0 0 11px;
+  width: 11px;
+  height: 11px;
+  color: currentColor;
+  stroke-width: 1.8;
+}
+
+.gameplay-loop h3 {
+  margin: 14px 0 10px;
+  color: #e9ece9;
+  font: 600 22px/1.15 Figtree, Manrope, sans-serif;
+}
+
+.gameplay-loop p {
+  max-width: 470px;
+  margin: 0;
+  color: #9eaba1;
+  font: 14px/1.68 Figtree, Manrope, sans-serif;
+}
+
+.tutorial-callout {
+  display: grid;
+  grid-template-columns: minmax(210px, 0.85fr) auto;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+  padding: 22px 24px;
+  border: 1px solid rgba(218, 228, 221, 0.14);
+  background: #0e0e11;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.tutorial-callout:hover,
+.tutorial-callout:focus-visible {
+  border-color: rgba(57, 185, 236, 0.62);
+  background: rgba(57, 185, 236, 0.045);
+}
+
+.tutorial-shortcuts-copy {
+  display: grid;
+  gap: 7px;
+}
+
+.tutorial-shortcuts-copy small {
+  color: #39b9ec;
+  font: 700 10px Figtree, Manrope, sans-serif;
+  letter-spacing: 0.08em;
+}
+
+.tutorial-shortcuts-copy strong {
+  color: #dce3dc;
+  font: 500 14px/1.55 Figtree, Manrope, sans-serif;
+}
+
+.tutorial-shortcuts-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  justify-self: end;
+  color: #39b9ec;
+  font: 700 13px Figtree, Manrope, sans-serif;
+}
+
+.tutorial-shortcuts-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #39b9ec;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.tutorial-shortcuts-arrow svg {
+  width: 30px;
+  height: 30px;
+  stroke-width: 1.6;
+}
+
+.tutorial-callout:hover .tutorial-shortcuts-arrow,
+.tutorial-callout:focus-visible .tutorial-shortcuts-arrow {
+  color: #39b9ec;
+  transform: translateX(3px);
+}
+
+.shortcuts-modal[hidden] {
+  display: none;
+}
+
+.shortcuts-modal {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  display: grid;
+  align-items: start;
+  justify-items: center;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 24px;
+}
+
+.shortcuts-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  right: var(--shortcuts-scrollbar-width, 0px);
+  background: rgba(5, 8, 10, 0.78);
+}
+
+.shortcuts-dialog {
+  position: relative;
+  width: min(680px, 100%);
+  padding: 30px;
+  border: 1px solid rgba(57, 185, 236, 0.44);
+  border-radius: 12px;
+  background: #0e0e11;
+}
+
+body.shortcuts-modal-open {
+  position: fixed;
+  top: calc(-1 * var(--shortcuts-page-scroll, 0px));
+  width: 100%;
+  overflow: hidden;
+}
+
+.shortcuts-dialog-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.shortcuts-dialog-header p {
+  margin: 0 0 8px;
+  color: #39b9ec;
+  font: 700 10px Figtree, Manrope, sans-serif;
+  letter-spacing: 0.12em;
+}
+
+.shortcuts-dialog h2 {
+  margin: 0;
+  color: #edf0ee;
+  font: 400 clamp(38px, 7vw, 54px)/0.95 ProtestStrike, Impact, sans-serif;
+}
+
+.shortcuts-close {
+  display: grid;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(141, 158, 174, 0.35);
+  border-radius: 50%;
+  background: transparent;
+  color: #dce3dc;
+  font: 400 30px/1 Figtree, Manrope, sans-serif;
+  cursor: pointer;
+}
+
+.shortcuts-dialog-intro {
+  max-width: 530px;
+  margin: 22px 0 26px;
+  color: #a9b3aa;
+  font: 14px/1.65 Figtree, Manrope, sans-serif;
+}
+
+.shortcuts-panel {
+  display: grid;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.shortcuts-panel article {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  align-items: center;
+  gap: 18px;
+  padding: 15px;
+  border: 1px solid rgba(141, 158, 174, 0.2);
+  border-radius: 7px;
+  background: rgba(141, 158, 174, 0.035);
+}
+
+.shortcuts-panel kbd {
+  display: grid;
+  width: 56px;
+  height: 52px;
+  place-items: center;
+  border: 1px solid rgba(57, 185, 236, 0.45);
+  border-radius: 6px;
+  background: rgba(57, 185, 236, 0.08);
+  color: #39b9ec;
+  font: 400 24px/1 ProtestStrike, Impact, sans-serif;
+}
+
+.shortcuts-panel strong {
+  color: #e6eeee;
+  font: 700 15px Figtree, Manrope, sans-serif;
+}
+
+.shortcuts-panel p {
+  margin: 5px 0 0;
+  color: #96a5a8;
+  font: 13px/1.5 Figtree, Manrope, sans-serif;
+}
+
+@media (max-width: 1000px) {
+  .tutorial-content {
+    padding: 84px 20px 0;
+  }
+
+  .tutorial-heading {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-inline: 0;
+  }
+
+  .tutorial-heading-action {
+    align-items: flex-start;
+  }
+
+  .tutorial-intro {
+    text-align: left;
+  }
+
+  .tutorial-shortcuts-trigger {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 720px) {
+  .gameplay-loop {
+    grid-template-columns: 1fr;
+  }
+.shortcuts-dialog h2 {
+    font-size: 30px;
+}
+  .gameplay-loop article {
+    grid-template-columns: 54px 1fr;
+    min-height: 0;
+    padding: 32px 0px 30px;
+  }
+
+  .gameplay-loop article > span {
+    width: 46px;
+    height: 46px;
+  }
+
+  .tutorial-callout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 24px 30px;
+    border-color: rgba(57, 185, 236, 0.28);
+    background: linear-gradient(90deg, rgba(57, 185, 236, 0.075), rgba(57, 185, 236, 0.012) 68%);
+  }
+
+  .tutorial-shortcuts-copy {
+    gap: 8px;
+  }
+
+  .tutorial-shortcuts-trigger {
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 17px;
+    border-top: 1px solid rgba(57, 185, 236, 0.2);
+  }
+
+  .tutorial-shortcuts-arrow {
+    margin-left: auto;
+  }
+
+  .shortcuts-dialog {
+    padding: 24px 18px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .tutorial-content {
+    padding-bottom: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gameplay-loop article {
+    transition: none;
+  }
+}

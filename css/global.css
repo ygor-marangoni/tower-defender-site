@@ -1,0 +1,95 @@
+body {
+  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Manrope, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.site-shell {
+  min-height: 100vh;
+  position: relative;
+  background: radial-gradient(circle at 80% 8%, rgba(55, 200, 255, 0.09), transparent 30%), var(--bg);
+}
+
+.site-shell.is-medieval {
+  --cyan: var(--gold);
+  --panel: #141b17;
+  background: radial-gradient(circle at 80% 8%, rgba(216, 179, 90, 0.1), transparent 30%), #101511;
+}
+
+.topbar,
+.section-wrap,
+footer {
+  width: min(1180px, calc(100% - 64px));
+  margin: auto;
+}
+
+.kicker {
+  color: var(--cyan);
+  font-family: Figtree, Manrope, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+section {
+  padding: 100px 0;
+  border-top: 1px solid rgba(141, 158, 174, 0.12);
+}
+
+.section-heading {
+  max-width: 580px;
+  margin-bottom: 42px;
+}
+
+.section-heading.compact {
+  margin-bottom: 35px;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 68px;
+}
+
+.medieval-card {
+  --cyan: var(--gold);
+  background: #171c17;
+}
+
+.button {
+  padding: 13px 20px;
+  border-radius: 3px;
+  background: var(--cyan);
+  color: #061017 !important;
+  font-weight: 800;
+}
+
+.button span {
+  margin-left: 24px;
+}
+
+#conteudo {
+  display: flex;
+  flex-direction: column;
+}
+
+#conteudo #inicio { order: 1; }
+#conteudo #jogar { order: 2; }
+#conteudo #defesas { order: 3; }
+#conteudo #tutorial { order: 4; }
+#conteudo #ranking { order: 5; }
+
+.mode-card:focus-visible,
+.button:focus-visible,
+.topbar a:focus-visible,
+.mobile-toggle:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--cyan);
+  outline-offset: 4px;
+}

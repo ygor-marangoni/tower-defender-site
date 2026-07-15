@@ -1,0 +1,507 @@
+#jogar.modes-section {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  color: #d7e0e7;
+  background: linear-gradient(180deg, #0e110e 0%, #0e0e11 50.48%, #0e0e11 100%);
+}
+
+#jogar .modes-heading,
+#jogar .mode-grid {
+  width: min(1440px, calc(100% - 120px));
+  margin-inline: auto;
+}
+
+#jogar .mode-grid::before {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  height: 1.5px;
+  background: rgba(218, 228, 221, 0.14);
+  content: "";
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+#jogar .modes-heading {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-height: 278px;
+  margin-bottom: 0;
+  border-right: 1.5px solid rgba(218, 228, 221, 0.14);
+  border-left: 1.5px solid rgba(218, 228, 221, 0.14);
+}
+
+#jogar .modes-heading > div:first-child {
+  display: flex;
+  align-items: center;
+  padding: 48px 44px;
+}
+
+#jogar .modes-heading .kicker {
+  display: none;
+}
+
+#jogar .modes-heading h2 {
+  max-width: 660px;
+  margin: 0;
+  color: #dfe4e5;
+  background: linear-gradient(100deg, #e2dede 0%, #dce4e6 45%, #c8edf6 100%);
+  background-clip: text;
+  font-family: ProtestStrike, Impact, sans-serif;
+  font-size: clamp(52px, 4vw, 72px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.012em;
+  white-space: nowrap;
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#jogar .modes-heading h2::after {
+  content: none;
+}
+
+#jogar .modes-heading-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 20px;
+  padding: 42px 44px;
+}
+
+#jogar .modes-intro {
+  max-width: 330px;
+  margin: 0;
+  color: #bac3cc;
+  font: 400 16px/1.75 Figtree, Manrope, sans-serif;
+  text-align: right;
+}
+
+#jogar .modes-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 284px;
+  min-height: 61px;
+  padding: 10px 11px 10px 30px;
+  border: 0;
+  border-radius: 999px;
+  background: #39b9ec;
+  box-shadow: none;
+  color: #071620 !important;
+  font: 700 15px/1 Figtree, Manrope, sans-serif;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+#jogar .modes-cta:hover {
+  background: #52c7f4;
+  transform: translateY(-2px);
+}
+
+#jogar .modes-cta span {
+  display: grid;
+  flex: 0 0 39px;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  margin-left: 18px;
+  border-radius: 50%;
+  background: #e5f3f8;
+}
+
+#jogar .modes-cta svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  color: #0c2835;
+  stroke-width: 1.8;
+}
+
+#jogar .mode-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  border-top: 0;
+  border-right: 1.5px solid rgba(218, 228, 221, 0.14);
+  border-left: 1.5px solid rgba(218, 228, 221, 0.14);
+}
+
+#jogar .mode-grid::after {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1.5px;
+  background: rgba(218, 228, 221, 0.14);
+  content: "";
+  pointer-events: none;
+  transform: translateX(-0.75px);
+}
+
+#jogar .mode-card,
+#jogar .mode-card:hover,
+#jogar .mode-card.selected {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  padding: 41px 44px 40px;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  outline-offset: -5px;
+  background: transparent;
+  box-shadow: none;
+  color: #bfcbd5;
+  cursor: pointer;
+  transform: none;
+}
+
+#jogar .medieval-card,
+#jogar .medieval-card:hover,
+#jogar .medieval-card.selected {
+  background: transparent;
+}
+
+#jogar .mode-card {
+  transition: background-color 240ms ease, color 240ms ease;
+}
+
+#jogar .mode-card:hover {
+  background: rgba(210, 226, 232, 0.018);
+}
+
+#jogar .medieval-card:hover {
+  background: rgba(216, 179, 90, 0.018);
+}
+
+#jogar .mode-card::before,
+#jogar .mode-card[aria-current="true"]::after {
+  content: none;
+}
+
+#jogar .card-top {
+  display: block;
+  height: 72px;
+  margin: 0 0 12px;
+}
+
+#jogar .mode-icon-image {
+  display: block;
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+#jogar .mode-card h3 {
+  margin: 7px 0 12px;
+  color: #becbd5;
+  font-family: Figtree, Manrope, sans-serif;
+  font-size: 29px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+#jogar .medieval-card h3 {
+  color: #d9a348;
+}
+
+#jogar .mode-card > p {
+  max-width: 650px;
+  min-height: 55px;
+  margin: 0;
+  color: #b9c4ce;
+  font: 400 16px/1.7 Figtree, Manrope, sans-serif;
+}
+
+#jogar .medieval-card > p {
+  color: #d6a249;
+}
+
+#jogar .mode-card-divider {
+  position: relative;
+  width: 100%;
+  height: 1.5px;
+  margin: 31px 0 40px;
+  background: rgba(218, 228, 221, 0.13);
+}
+
+#jogar .mode-card-divider::before,
+#jogar .mode-card-divider::after {
+  position: absolute;
+  top: 50%;
+  width: 2.5px;
+  height: 2.5px;
+  border-radius: 50%;
+  background: rgba(240, 244, 242, 0.86);
+  box-shadow: none;
+  content: "";
+  transform: translateY(-50%);
+}
+
+#jogar .mode-card-divider::before {
+  left: 0;
+}
+
+#jogar .mode-card-divider::after {
+  right: 0;
+}
+
+#jogar .mode-placeholder {
+  width: 100%;
+  aspect-ratio: 1362 / 692;
+  overflow: hidden;
+  border: 0;
+  border-radius: 8px;
+  background: #071018;
+}
+
+#jogar .mode-placeholder img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: filter 240ms ease, transform 400ms ease;
+}
+
+#jogar .mode-card:hover .mode-placeholder img,
+#jogar .mode-card.selected .mode-placeholder img {
+  filter: brightness(1.04);
+  transform: scale(1.008);
+}
+
+#jogar .grid-junction {
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  opacity: 0.58;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+#jogar .grid-junction::before,
+#jogar .grid-junction::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "";
+  transform: translate(-50%, -50%);
+}
+
+#jogar .grid-junction::before {
+  width: 11px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(220, 227, 225, 0.38), #f3f5f4 28%, #f3f5f4 72%, rgba(220, 227, 225, 0.38));
+  box-shadow: none;
+}
+
+#jogar .grid-junction::after {
+  width: 2px;
+  height: 11px;
+  background: linear-gradient(180deg, rgba(220, 227, 225, 0.38), #f3f5f4 28%, #f3f5f4 72%, rgba(220, 227, 225, 0.38));
+  box-shadow: none;
+}
+
+#jogar .grid-junction-left {
+  left: 0;
+}
+
+#jogar .grid-junction-left::before {
+  width: 6px;
+  transform: translateY(-50%);
+}
+
+#jogar .grid-junction-center {
+  left: 50%;
+}
+
+#jogar .grid-junction-center::after {
+  top: 50%;
+  height: 6px;
+  transform: translateX(-50%);
+}
+
+#jogar .grid-junction-right {
+  left: 100%;
+}
+
+#jogar .grid-junction-right::before {
+  width: 6px;
+  transform: translate(-100%, -50%);
+}
+
+#jogar .grid-junction-bottom-left,
+#jogar .grid-junction-bottom-center,
+#jogar .grid-junction-bottom-right {
+  top: 100%;
+}
+
+#jogar .grid-junction-bottom-left::after,
+#jogar .grid-junction-bottom-center::after,
+#jogar .grid-junction-bottom-right::after {
+  top: 50%;
+  height: 6px;
+  transform: translate(-50%, -100%);
+}
+
+#jogar .grid-junction-bottom-left {
+  left: 0;
+}
+
+#jogar .grid-junction-bottom-left::before {
+  width: 6px;
+  transform: translateY(-50%);
+}
+
+#jogar .grid-junction-bottom-center {
+  left: 50%;
+}
+
+#jogar .grid-junction-bottom-right {
+  left: 100%;
+}
+
+#jogar .grid-junction-bottom-right::before {
+  width: 6px;
+  transform: translate(-100%, -50%);
+}
+
+@media (max-width: 1100px) and (min-width: 1001px) {
+  #jogar .modes-heading h2 {
+    font-size: 45px;
+  }
+
+  #jogar .modes-heading > div:first-child,
+  #jogar .modes-heading-action {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  #jogar .mode-card,
+  #jogar .mode-card:hover,
+  #jogar .mode-card.selected {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 1000px) {
+  #jogar .modes-heading,
+  #jogar .mode-grid {
+    width: calc(100% - 32px);
+  }
+
+  #jogar .modes-heading {
+    grid-template-columns: 1fr;
+  }
+
+  #jogar .modes-heading > div:first-child {
+    padding-bottom: 24px;
+    margin-top: 40px;
+  }
+
+  #jogar .modes-heading-action {
+    align-items: flex-start;
+    padding-top: 0;
+  }
+
+  #jogar .modes-intro {
+    text-align: left;
+  }
+
+  #jogar .mode-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #jogar .mode-grid::after {
+    content: none;
+  }
+
+  #jogar .futuristic-card {
+    border-right: 0;
+    border-bottom: 1.5px solid rgba(218, 228, 221, 0.14);
+  }
+
+  #jogar .grid-junction-center {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  #jogar .modes-heading > div:first-child {
+    padding: 46px 20px 14px;
+  }
+
+  #jogar .modes-heading-action {
+    padding: 0 20px 44px;
+  }
+
+  #jogar .modes-heading h2 {
+    font-size: clamp(29px, 9vw, 54px);
+    line-height: 1.02;
+    letter-spacing: 0;
+  }
+
+  #jogar .modes-intro {
+    font-size: 15px;
+  }
+
+  #jogar .modes-cta {
+    width: min(100%, 284px);
+  }
+
+  #jogar .mode-card,
+  #jogar .mode-card:hover,
+  #jogar .mode-card.selected {
+    padding: 32px 20px 30px;
+  }
+
+  #jogar .card-top {
+    height: 60px;
+  }
+
+  #jogar .mode-icon-image {
+    width: 48px;
+    height: 48px;
+  }
+
+  #jogar .mode-card h3 {
+    font-size: 24px;
+  }
+
+  #jogar .mode-card > p {
+    min-height: 0;
+    font-size: 15px;
+  }
+
+  #jogar .mode-card-divider {
+    margin: 27px 0 30px;
+  }
+
+  #jogar .mode-placeholder {
+    min-height: 190px;
+    aspect-ratio: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #jogar .modes-cta,
+  #jogar .mode-placeholder img {
+    transition: none;
+  }
+}
