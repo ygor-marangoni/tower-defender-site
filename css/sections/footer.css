@@ -229,10 +229,24 @@ footer img {
   color: #f0c36a;
 }
 
+footer .section-grid-marker-bottom-left,
+footer .section-grid-marker-bottom-right {
+  width: 0;
+  height: 0;
+  transform: none;
+}
+
+footer .section-grid-marker-bottom-left::before,
+footer .section-grid-marker-bottom-right::before,
+footer .section-grid-marker-bottom-left::after,
+footer .section-grid-marker-bottom-right::after {
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+
 footer .section-grid-marker-bottom-left::after,
 footer .section-grid-marker-bottom-right::after {
   height: 6px;
-  transform: translate(-50%, -100%);
 }
 
 @media (max-width: 800px) {

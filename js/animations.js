@@ -35,7 +35,7 @@ const viewportReveals = [
   { selector: 'footer .footer-brand', type: 'rise', distance: 14 },
   { selector: 'footer .footer-nav', type: 'fade', delay: 70, duration: 680 },
   { selector: 'footer .footer-start', type: 'fade', delay: 140, duration: 680 },
-  { selector: 'footer .footer-bottom', type: 'rise', delay: 70, distance: 12 },
+  { selector: 'footer .footer-bottom', type: 'fade', delay: 70, duration: 680 },
 ]
 
 function prepareReveals(definitions, baseDelay = 0) {
